@@ -70,35 +70,6 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>ru.otus</groupId>
-                <artifactId>HW_1</artifactId>
-                <version>2018-10</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>net.sf.proguard</groupId>
-                        <artifactId>proguard-base</artifactId>
-                        <version>4.10</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals><goal>proguard</goal></goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <proguardVersion>4.10</proguardVersion>
-                    <options>
-                        <option>-keep public class myapp.Main{public static void main(java.lang.String[]);}</option>
-                    </options>
-                    <libs>
-                        <lib>${java.home}/lib/rt.jar</lib>
-                        <lib>${java.home}/lib/jce.jar</lib>
-                    </libs>
-                </configuration>
-            </plugin>
-
         </plugins>
 
     </build>
